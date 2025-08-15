@@ -1,0 +1,342 @@
+:root {
+  --background-dark: #12121c;
+  --surface-color: #1a1a2e;
+  --primary-accent: #00f5d4;
+  --secondary-accent: #fbb13c;
+  --text-main: #e0e0e0;
+  --text-secondary: #a0a0b0;
+  --border-color: #33334a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.5rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.header .symbol {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 245, 212, 0.1);
+}
+
+.price-display {
+  text-align: center;
+}
+
+.price-display h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.price-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  letter-spacing: 1px;
+}
+
+.price-change {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.positive {
+  color: #4caf50;
+}
+
+.negative {
+  color: #f44336;
+}
+
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.about p {
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.whitepaper h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.whitepaper h3 {
+  font-size: 1.25rem;
+  color: var(--primary-accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.whitepaper-button {
+  background-color: transparent;
+  color: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whitepaper-button:hover {
+  background-color: var(--primary-accent);
+  color: var(--background-dark);
+}
+
+.token-details h2, .technology h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.token-details ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.token-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.token-details li:last-child {
+  border-bottom: none;
+}
+
+.token-details li strong {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.token-details li span {
+  color: var(--primary-accent);
+  font-weight: 600;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.token-details p {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.technology h3 {
+  font-size: 1.25rem;
+  color: var(--primary-accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.technology p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.technology p strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.roadmap h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.roadmap ul {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.roadmap ul::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.roadmap li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-secondary);
+}
+
+.roadmap li:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap li::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--secondary-accent);
+    border: 2px solid var(--surface-color);
+}
+
+.roadmap li strong {
+    display: block;
+    color: var(--primary-accent);
+    margin-bottom: 0.25rem;
+}
+
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-accent);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  color: var(--background-dark);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 245, 212, 0.3);
+}
+
+.footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
